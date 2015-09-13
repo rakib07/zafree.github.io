@@ -763,7 +763,7 @@ $(document).ready(function() {
 		autoplayTimeout: 6000,
 		smartSpeed : 500,
 		autoplayHoverPause : true,
-		//loop: true,
+		loop: true,
 		dots: false,
 	});
 
