@@ -14,10 +14,14 @@
     <link rel="stylesheet" href="/bower_components/inconsolata-webfont/css/inconsolata-webfont.min.css" />
     <link rel="stylesheet" href="/bower_components/owl-carousel2/dist/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="/bower_components/owl-carousel2/dist/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="/dist/css/zafree.min.css" />
     <link rel="stylesheet prefetch" href="/bower_components/photoswipe/dist/photoswipe.css">
     <link rel="stylesheet prefetch" href="/bower_components/photoswipe/dist/default-skin/default-skin.css">
-    <link rel="stylesheet" href="/dist/css/zafree.min.css" />
     <style>.swipe-gallery figcaption{display:none}</style>
+
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="http://brunjo.github.io/rowGrid.js/javascripts/jquery.row-grid.js"></script>
+
   </head>
 
   <body>
@@ -491,14 +495,22 @@
       </div>
     </footer>
 
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
-    <script src="/bower_components/headroom.js/dist/headroom.min.js"></script>
-    <script src="/bower_components/owl-carousel2/dist/owl.carousel.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".img-grid").rowGrid({
+            itemSelector: ".img-item",
+            minMargin: 1,
+            maxMargin: 2,
+            resize: true,
+            lastRowClass: "last-row",
+            firstItemClass: "first-item"
+        });
+      });
+    </script>
     <script src='/bower_components/photoswipe/dist/photoswipe.min.js'></script>
     <script src='/bower_components/photoswipe/dist/photoswipe-ui-default.min.js'></script>
-    <script src="/dist/js/zafree.min.js"></script>
+
 
 
   </body>
